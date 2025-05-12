@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	//console.log(parseInt(numbers09[1])+parseInt(numbers09[9]))
+	ang_alph = "abcdefghijklmnopqrstuvz"
+	numbers09 = "0123456789"
+	hyphens = "-_"
+	misc_chars1 = "@!#$%&?"
+	//misc_chars2 = "¡¿¬°"
+	rand_chars = ang_alph+numbers09+hyphens+misc_chars1
+	id_gend = ""
+	for(let o=0;o<5000;o++){
+		id_gend = ""
+		for(let i=0; i<22; i++){
+			pos = Math.floor(Math.random()*rand_chars.length)
+			id_gend = id_gend + rand_chars[pos]
+		}
+	}
+	if(localStorage.getItem("id")==null || localStorage.getItem("id")==""){
+		localStorage.setItem("id",id_gend)
+	}
+	/*
+	console.log(localStorage.getItem("id").length)
+	console.log(localStorage.getItem("id"))
+	*/
+	//localStorage.setItem("id","")
+</script>
+</html>
